@@ -3,7 +3,7 @@ include_once "config.inc.php";
 ?>
 <html>
     <head>
-        <title>Create Users</title>
+        <title>Create Users | Quick Chat</title>
         <meta charset="UTF-8" />
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -18,11 +18,12 @@ include_once "config.inc.php";
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">Creating users for testing...</a>
+              <a class="navbar-brand" href="#">Quick Chat: Creating users in Moxtra for testing...</a>
             </div>
           </div>
         </nav>
 		<div class="container">
+				<ul class="list-group">
 				<?php
 				$row = 1;
 				if (($handle = fopen("user_data.csv", "r")) !== FALSE) {
@@ -52,9 +53,9 @@ include_once "config.inc.php";
 
 					    if ($access_token != "")
 					    {
-						    echo "<div class='row'>".$firstname." ".$lastname." <span style='color:green;'>(Create User Success)</span<</div>";
+						    echo "<li class='list-group-item'>".$firstname." ".$lastname." <span style='color:green; float:right;'>(Create User Success)</span></li>";
 					    } else {
-						    echo "<div class='row'>".$firstname." ".$lastname." <span style='color:red;'>(Create User Failed)</span<</div>";
+						    echo "<li class='list-group-item'>".$firstname." ".$lastname." <span style='color:red; float:right;'>(Create User Failed)</span></li>";
 					    }
 
 				        $row++;
@@ -62,6 +63,7 @@ include_once "config.inc.php";
 				    fclose($handle);
 				}
 				?>
+				</ul>
 		</div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	</body>   

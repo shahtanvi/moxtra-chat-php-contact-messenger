@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Login - Contact Messenger</title>
+        <title>Login | Quick Chat</title>
         <meta charset="UTF-8" />
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -25,7 +25,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">Contact Messenger</a>
+              <a class="navbar-brand" href="#">Quick Chat</a>
             </div>
           </div>
         </nav>

@@ -4,7 +4,7 @@ include_once "functions.inc.php";
 ?>
 <html>
     <head>
-        <title>Contact Messenger</title>
+        <title>My Contacts | Quick Chat</title>
         <meta charset="UTF-8" />
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -44,7 +44,7 @@ include_once "functions.inc.php";
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">Contact Messenger</a>
+              <a class="navbar-brand" href="#">Quick Chat</a>
             </div>
           </div>
         </nav>
