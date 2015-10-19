@@ -1,12 +1,12 @@
-Contact Messenger
+Quick Chat
 ======================
-A rich chat application built with Moxtra's JavaScript SDK and user authentication APIs. This app showcases the flow of embedding the Moxtra Chat module into your application, so users can communicate with their contacts inside your app.
+A rich chat application built with Moxtra's JavaScript SDK and user authentication APIs. This app shows cases the flow of embedding the Moxtra Chat module into your application, so users can communicate with their contacts inside your app.
 
 Installation
 ------------
 ## Step 1 - Download
 
-Download the package, unzip to install into your server. The package contains the following files...
+Download the Moxtra Chat SDK package, unzip and install on your server. The package contains the following files...
 
 ```
 	|-- config.inc.php
@@ -20,31 +20,29 @@ Download the package, unzip to install into your server. The package contains th
 
 ## Step 2 - Configuration
 
-Before proceeding further, ensure you have registered your app with Moxtra. Register your app at [https://developer.moxtra.com/nextapps](https://developer.moxtra.com/nextapps)
+Before proceeding further, [https://developer.moxtra.com/nextapps](register your app) with Moxtra. You will be provided with a unique client id and client secret key.
 
-Open config.inc.php file and update the values [INSERT-YOUR-APP-CLIENT-ID] and [INSERT-YOUR-APP-CLIENT-SECRET] with the actual values of your sandbox app in Moxtra.
+Open config.inc.php file and update [INSERT-YOUR-APP-CLIENT-ID] and [INSERT-YOUR-APP-CLIENT-SECRET] with client id and client secret provided while registering your sandbox app in Moxtra.
 
 ## Step 3 - Create Users in Moxtra
 
-In this step you will be creating few users from "user_data.csv" (sample user database file for this application). Each record in this CSV file represent an user and each record contains an unique identifer for the user in your app, first name and last name.
+In this step you will create few users from "user_data.csv". user_data.csv is a sample user data file provided for implementing the Quick Chat application. Each row in this CSV file represents a user and each row contains a unique identifer, the first name and last name of the user. 
 
-To setup these test user data into Moxtra, please run the script once by visiting `http://example.com/contact_messenger/create_users.php` (replace `http://example.com` with the actual domain and path of your webserver where you installed the package). 
+To add these users to Moxtra, please run the script `http://[example.com]/contact_messenger/create_users.php` (replace `example.com` with the actual domain and path of your webserver where the Moxtra Chat SDK package has been installed). 
+This script calls the Moxtra API to create the users. A successful response on the web page indicates that the users have been successfully created. 
 
-Executing this script will call the Moxtra API to create the user. You should see the response on successful creation of this test user data in the web page.
+For further information on addding users in Moxtra, please visit [https://developer.moxtra.com/docs/docs-authentication/](https://developer.moxtra.com/docs/docs-authentication/).
 
-For API documentation on creating users in Moxtra please visit [https://developer.moxtra.com/docs/docs-authentication/](https://developer.moxtra.com/docs/docs-authentication/)
-
-Note: Before an user is trying to chat with an other user, they should exist in Moxtra. So please setup the user in Moxtra before you add them to any chat. We recommend in your implementation to setup the user in Moxtra when they successfully sign up into your application. 
+Note: Two users can chat with each other only if they already exist in Moxtra. We recommend setting up the users when they sucessfully sign into your application and then add them to the chat.
 
 ## Step 4 - User login
 
-Navigate your browser to `http://example.com/login.php` (replace `http://example.com` with the actual domain and path of your webserver where you installed the package). 
-
-You will have the option to select one of the users (created in the previous step) and click "Login". You will need to implement the login and authentication in your app, in this tutorial you are simulating the login process.
+Navigate to `http://example.com/login.php` (replace `http://example.com` with the actual domain and path of your webserver). 
+You will now have the option to select one of the users (created in the previous step) and "Login". You will need to implement the login and authentication for your app. In this tutorial, you are just simulating the login process.
 
 ## Step 5 - Initialize user 
 
-Upon successful login of the user, you want to show the user's contact list but before showing the contacts you need to initialize the logged in user. 
+Upon successful login of the user, you want to show the user's contact list. But before that, you need to show the contacts you need to initialize the logged in user.
 
 In this step you will first authenticate the user and get the access token:
 
